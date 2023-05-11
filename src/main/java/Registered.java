@@ -16,10 +16,15 @@ public void service (HttpServletRequest req, HttpServletResponse res) throws IOE
 	
 	PrintWriter p = res.getWriter();
 	
+	
 	p.println("First Name:"+fName);
 	p.println("First Name:"+lName);
 	p.println("Email:"+email);
 	p.println("Registered Successfully");
+	
+	res.setContentType("text/html");
+	p.println("<html><body><a href='Login'>Login</a><body></html>");
+	
 	
 	
 }
